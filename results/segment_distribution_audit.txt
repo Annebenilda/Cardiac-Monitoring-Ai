@@ -1,0 +1,38 @@
+SEGMENT DISTRIBUTION AUDIT
+============================================================
+Metadata columns:
+['record_id', 'start_seconds', 'duration_seconds', 'label', 'reference_annotation', 'normalized_record_id']
+
+Class counts:
+label
+NON_AFIB    41
+AFIB        33
+
+Segments by recording and label:
+label                 AFIB  NON_AFIB  All
+normalized_record_id                     
+4015                     3         7   10
+4043                     5         5   10
+4048                     5         5   10
+4126                     5         5   10
+4746                     3         6    9
+4908                     7         3   10
+4936                     5         5   10
+5091                     0         5    5
+All                     33        41   74
+
+Segments per recording:
+normalized_record_id
+4015    10
+4043    10
+4048    10
+4126    10
+4746     9
+4908    10
+4936    10
+5091     5
+
+Duplicate-start check:
+No recognized start-time column was found.
+
+This audit checks metadata consistency only. It does not verify the clinical correctness of rhythm annotations.

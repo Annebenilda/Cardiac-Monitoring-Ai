@@ -1,0 +1,104 @@
+====================================================================
+GROUPED BASELINE FEATURE ERROR ANALYSIS
+====================================================================
+Segments in dataset: 74
+Segments evaluated: 74
+Correct predictions: 44
+Misclassified predictions: 30
+
+CORRECT VS MISCLASSIFIED FEATURE SUMMARIES
+Descriptive comparisons only; not causal explanations.
+
+Feature: signal_std
+               count      mean    median
+Misclassified     30  0.367837  0.277562
+Correct           44  0.323102  0.263781
+
+Feature: signal_rms
+               count      mean    median
+Misclassified     30  0.372351  0.283788
+Correct           44  0.326671  0.265353
+
+Feature: amplitude_range
+               count      mean  median
+Misclassified     30  2.506000  2.1875
+Correct           44  2.370114  2.0725
+
+Feature: robust_range
+               count      mean    median
+Misclassified     30  1.055500  0.757750
+Correct           44  0.975687  0.675125
+
+Feature: iqr
+               count      mean  median
+Misclassified     30  0.391250  0.2075
+Correct           44  0.248551  0.1750
+
+Feature: filtered_std
+               count      mean    median
+Misclassified     30  0.292191  0.277734
+Correct           44  0.287448  0.220398
+
+Feature: peak_count
+               count       mean  median
+Misclassified     30  20.200000    20.0
+Correct           44  19.886364    19.0
+
+Feature: rr_mean
+               count      mean    median
+Misclassified     30  0.516939  0.509474
+Correct           44  0.561312  0.520444
+
+Feature: rr_std
+               count      mean    median
+Misclassified     30  0.162703  0.168164
+Correct           44  0.125736  0.102171
+
+Feature: rr_median
+               count      mean  median
+Misclassified     30  0.479133   0.482
+Correct           44  0.551636   0.469
+
+Feature: rr_rmssd
+               count      mean    median
+Misclassified     30  0.221715  0.247559
+Correct           44  0.172008  0.143185
+
+Feature: estimated_rate
+               count        mean      median
+Misclassified     30  120.342538  117.769319
+Correct           44  117.881366  115.287425
+
+Feature: power_0_5_5
+               count      mean    median
+Misclassified     30  0.424433  0.425689
+Correct           44  0.351200  0.364043
+
+Feature: power_5_15
+               count      mean    median
+Misclassified     30  0.388335  0.406709
+Correct           44  0.435086  0.446000
+
+Feature: power_15_40
+               count      mean    median
+Misclassified     30  0.161869  0.157752
+Correct           44  0.182934  0.168979
+
+MISCLASSIFICATION COUNTS BY RECORDING
+           segments  correct  misclassified  accuracy
+record_id                                            
+04015            10        3              7  0.300000
+04043            10        5              5  0.500000
+04048            10        6              4  0.600000
+04126            10        8              2  0.800000
+04746             9        5              4  0.555556
+04908            10        7              3  0.700000
+04936            10        5              5  0.500000
+05091             5        5              0  1.000000
+
+LIMITATIONS
+- This is an exploratory analysis of a small dataset.
+- Feature averages do not prove why a segment was misclassified.
+- Multiple segments from one recording are not independent patients.
+- Peak-derived timing features are approximate, not clinical measurements.
+- This analysis does not validate clinical performance.

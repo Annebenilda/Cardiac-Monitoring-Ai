@@ -1,0 +1,52 @@
+GROUPED PER-RECORDING ERROR ANALYSIS
+================================================
+Segments evaluated: 74
+Recordings: 8
+Correct: 44
+Misclassified: 30
+
+Per-recording metrics:
+record_id  segments  correct  misclassified  accuracy  balanced_accuracy  afib_precision  afib_recall  afib_f1  true_afib  true_non_afib  predicted_afib  predicted_non_afib
+     4015        10        3              7  0.300000           0.500000        0.300000          1.0 0.461538          3              7              10                   0
+     4043        10        5              5  0.500000           0.500000        0.500000          0.2 0.285714          5              5               2                   8
+     4048        10        6              4  0.600000           0.600000        0.555556          1.0 0.714286          5              5               9                   1
+     4126        10        8              2  0.800000           0.800000        0.800000          0.8 0.800000          5              5               5                   5
+     4746         9        5              4  0.555556           0.666667        0.428571          1.0 0.600000          3              6               7                   2
+     4908        10        7              3  0.700000           0.500000        0.700000          1.0 0.823529          7              3              10                   0
+     4936        10        5              5  0.500000           0.500000        0.000000          0.0 0.000000          5              5               0                  10
+     5091         5        5              0  1.000000                NaN        0.000000          0.0 0.000000          0              5               0                   5
+
+Misclassified segments:
+record_id true_label predicted_label  estimated_afib_probability  correct        result
+     4015   NON_AFIB            AFIB                9.529314e-01    False MISCLASSIFIED
+     4015   NON_AFIB            AFIB                9.581743e-01    False MISCLASSIFIED
+     4015   NON_AFIB            AFIB                8.670061e-01    False MISCLASSIFIED
+     4015   NON_AFIB            AFIB                8.736541e-01    False MISCLASSIFIED
+     4015   NON_AFIB            AFIB                6.636599e-01    False MISCLASSIFIED
+     4015   NON_AFIB            AFIB                8.842638e-01    False MISCLASSIFIED
+     4015   NON_AFIB            AFIB                9.244062e-01    False MISCLASSIFIED
+     4043   NON_AFIB            AFIB                5.167429e-01    False MISCLASSIFIED
+     4043       AFIB        NON_AFIB                3.608470e-01    False MISCLASSIFIED
+     4043       AFIB        NON_AFIB                4.368481e-01    False MISCLASSIFIED
+     4043       AFIB        NON_AFIB                2.205998e-07    False MISCLASSIFIED
+     4043       AFIB        NON_AFIB                4.255902e-01    False MISCLASSIFIED
+     4048   NON_AFIB            AFIB                6.403064e-01    False MISCLASSIFIED
+     4048   NON_AFIB            AFIB                6.687960e-01    False MISCLASSIFIED
+     4048   NON_AFIB            AFIB                6.907226e-01    False MISCLASSIFIED
+     4048   NON_AFIB            AFIB                6.374918e-01    False MISCLASSIFIED
+     4126   NON_AFIB            AFIB                5.889993e-01    False MISCLASSIFIED
+     4126       AFIB        NON_AFIB                4.299218e-01    False MISCLASSIFIED
+     4746   NON_AFIB            AFIB                9.075554e-01    False MISCLASSIFIED
+     4746   NON_AFIB            AFIB                7.715977e-01    False MISCLASSIFIED
+     4746   NON_AFIB            AFIB                7.911430e-01    False MISCLASSIFIED
+     4746   NON_AFIB            AFIB                7.961416e-01    False MISCLASSIFIED
+     4908   NON_AFIB            AFIB                8.212627e-01    False MISCLASSIFIED
+     4908   NON_AFIB            AFIB                7.240635e-01    False MISCLASSIFIED
+     4908   NON_AFIB            AFIB                6.949660e-01    False MISCLASSIFIED
+     4936       AFIB        NON_AFIB                7.451279e-02    False MISCLASSIFIED
+     4936       AFIB        NON_AFIB                3.777912e-01    False MISCLASSIFIED
+     4936       AFIB        NON_AFIB                3.744811e-03    False MISCLASSIFIED
+     4936       AFIB        NON_AFIB                1.148926e-02    False MISCLASSIFIED
+     4936       AFIB        NON_AFIB                6.573313e-02    False MISCLASSIFIED
+
+Research prototype only; not for clinical use.

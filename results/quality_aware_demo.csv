@@ -1,0 +1,6 @@
+segment_id,reference_label,amplitude_range,largest_change,quality_flags,system_status
+1,NON_AFIB,3.495,0.95,No configured quality flag triggered,REVIEWABLE
+2,NON_AFIB,3.095,0.925,No configured quality flag triggered,REVIEWABLE
+3,AFIB,4.025,1.01,No configured quality flag triggered,REVIEWABLE
+4,AFIB,3.315,1.22,No configured quality flag triggered,REVIEWABLE
+5,NON_AFIB,10.475,2.17,"large_amplitude_range, abrupt_change",INCONCLUSIVE

@@ -1,0 +1,37 @@
+ECG DUPLICATE AND OVERLAP AUDIT
+============================================================
+Metadata file: C:\Users\ASUS\OneDrive\Documents\Cardiac_Monitoring_AI\results\expanded_ecg_metadata_clean.csv
+Total segments: 74
+Unique recordings: 8
+
+1. DUPLICATE SEGMENT START TIMES
+------------------------------------------------------------
+No repeated start times found.
+
+2. OVERLAPPING SEGMENTS
+------------------------------------------------------------
+No overlapping time intervals found.
+
+3. TIMING DATA CHECK
+------------------------------------------------------------
+Missing/invalid start times: 0
+Missing/invalid durations: 0
+Non-positive durations: 0
+
+4. SEGMENTS PER RECORDING
+------------------------------------------------------------
+normalized_record_id  segment_count
+                4015             10
+                4043             10
+                4048             10
+                4126             10
+                4746              9
+                4908             10
+                4936             10
+                5091              5
+
+INTERPRETATION
+------------------------------------------------------------
+Repeated starts and overlaps are findings to review, not automatically proof of a data error.
+Adjacent segments that meet exactly at their boundaries are not counted as overlapping.
+This audit checks metadata timing, not waveform equality.

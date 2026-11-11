@@ -1,0 +1,72 @@
+GROUPED MODEL COMPARISON
+=================================================================
+Segments: 74
+Unique recordings: 8
+Class counts:
+label
+NON_AFIB    41
+AFIB        33
+
+All out-of-fold predictions are made with one recording held out.
+The same folds are used for both models.
+
+MODEL: LOGISTIC
+-----------------------------------------------------------------
+Accuracy: 0.595
+Balanced accuracy: 0.605
+Confusion matrix (rows=true, columns=predicted; AFIB then NON_AFIB):
+[[23 10]
+ [20 21]]
+              precision    recall  f1-score   support
+
+        AFIB      0.535     0.697     0.605        33
+    NON_AFIB      0.677     0.512     0.583        41
+
+    accuracy                          0.595        74
+   macro avg      0.606     0.605     0.594        74
+weighted avg      0.614     0.595     0.593        74
+
+
+MODEL: DUMMY_MAJORITY
+-----------------------------------------------------------------
+Accuracy: 0.554
+Balanced accuracy: 0.500
+Confusion matrix (rows=true, columns=predicted; AFIB then NON_AFIB):
+[[ 0 33]
+ [ 0 41]]
+              precision    recall  f1-score   support
+
+        AFIB      0.000     0.000     0.000        33
+    NON_AFIB      0.554     1.000     0.713        41
+
+    accuracy                          0.554        74
+   macro avg      0.277     0.500     0.357        74
+weighted avg      0.307     0.554     0.395        74
+
+
+PER-FOLD RESULTS
+-----------------------------------------------------------------
+ fold held_out_record          model  test_segments  train_recordings  accuracy  balanced_accuracy
+    1            4015       LOGISTIC             10                 7     0.300              0.500
+    1            4015 DUMMY_MAJORITY             10                 7     0.700              0.500
+    2            4043       LOGISTIC             10                 7     0.500              0.500
+    2            4043 DUMMY_MAJORITY             10                 7     0.500              0.500
+    3            4048       LOGISTIC             10                 7     0.600              0.600
+    3            4048 DUMMY_MAJORITY             10                 7     0.500              0.500
+    4            4126       LOGISTIC             10                 7     0.800              0.800
+    4            4126 DUMMY_MAJORITY             10                 7     0.500              0.500
+    5            4746       LOGISTIC              9                 7     0.556              0.667
+    5            4746 DUMMY_MAJORITY              9                 7     0.667              0.500
+    6            4908       LOGISTIC             10                 7     0.700              0.500
+    6            4908 DUMMY_MAJORITY             10                 7     0.300              0.500
+    7            4936       LOGISTIC             10                 7     0.500              0.500
+    7            4936 DUMMY_MAJORITY             10                 7     0.500              0.500
+    8            5091       LOGISTIC              5                 7     1.000              1.000
+    8            5091 DUMMY_MAJORITY              5                 7     1.000              1.000
+
+CAUTIONS
+-----------------------------------------------------------------
+Exploratory prototype only; not a clinical diagnostic model.
+Peak-count and RR-derived features use an unvalidated detector.
+Leave-one-recording-out evaluation does not guarantee patient-level independence.
+The dummy comparison is a reference baseline, not proof of clinical value.

@@ -1,0 +1,39 @@
+============================================================
+GROUPED BASELINE RESULTS
+============================================================
+Segments evaluated: 74/74
+Recordings: 8
+Accuracy: 0.595
+Balanced accuracy: 0.605
+AFIB precision: 0.535
+AFIB recall: 0.697
+AFIB F1 score: 0.605
+
+Confusion matrix (rows=true, columns=predicted)
+Label order: ['AFIB', 'NON_AFIB']
+[[23 10]
+ [20 21]]
+
+Classification report:
+              precision    recall  f1-score   support
+
+        AFIB       0.53      0.70      0.61        33
+    NON_AFIB       0.68      0.51      0.58        41
+
+    accuracy                           0.59        74
+   macro avg       0.61      0.60      0.59        74
+weighted avg       0.61      0.59      0.59        74
+
+
+Fold summary:
+ fold test_recording  test_segments  train_recordings
+    1          04015             10                 7
+    2          04043             10                 7
+    3          04048             10                 7
+    4          04126             10                 7
+    5          04746              9                 7
+    6          04908             10                 7
+    7          04936             10                 7
+    8          05091              5                 7
+
+Important: exploratory research prototype only. Not a clinical diagnostic model.

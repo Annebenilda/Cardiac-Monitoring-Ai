@@ -1,0 +1,50 @@
+GROUPED BASELINE AUDIT
+============================================================
+Prediction rows: 74
+Unique recordings: 8
+True class counts:
+true_label
+NON_AFIB    41
+AFIB        33
+
+Accuracy: 0.595
+Balanced accuracy: 0.605
+
+Classification report:
+              precision    recall  f1-score   support
+
+        AFIB      0.535     0.697     0.605        33
+    NON_AFIB      0.677     0.512     0.583        41
+
+    accuracy                          0.595        74
+   macro avg      0.606     0.605     0.594        74
+weighted avg      0.614     0.595     0.593        74
+
+Confusion matrix (rows=true, columns=predicted):
+               Pred AFIB  Pred NON_AFIB
+True AFIB             23             10
+True NON_AFIB         20             21
+
+PER-RECORD PERFORMANCE
+------------------------------------------------------------
+           segments  correct  accuracy  true_afib  true_non_afib
+record_id                                                       
+4015             10        3     0.300          3              7
+4043             10        5     0.500          5              5
+4048             10        6     0.600          5              5
+4126             10        8     0.800          5              5
+4746              9        5     0.556          3              6
+4908             10        7     0.700          7              3
+4936             10        5     0.500          5              5
+5091              5        5     1.000          0              5
+
+DUPLICATE CHECK
+------------------------------------------------------------
+Rows in repeated record/time/label/prediction groups: 69
+No recognized segment-start column was found; duplicate check is limited.
+
+INTERPRETATION
+------------------------------------------------------------
+This is an exploratory audit of saved predictions, not an independent clinical validation.
+Group separation by recording reduces segment-level leakage, but does not establish generalization to new patients or devices.
+Repeated segments or adjacent segments from one recording may still affect independence; inspect dataset construction.
